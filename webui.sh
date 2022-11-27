@@ -145,5 +145,6 @@ else
     printf "\n%s\n" "${delimiter}"
     printf "Launching launch.py..."
     printf "\n%s\n" "${delimiter}"
+    python3 -c "import torch; print(torch.cuda.is_available())"
     "${python_cmd}" "${LAUNCH_SCRIPT}" "$@"
 fi
